@@ -4,3 +4,5 @@ module.exports = {
     mongoURI: 'mongodb+srv://viveKsLoc:kusumaraVi4$@cluster0-a42ij.mongodb.net/test?retryWrites=true&w=majority',
     cookieKey: 'redacted'
 }
+
+// mongodb+srv://vivekravindra4:<password>@cluster0-0v8pb.mongodb.net/test?retryWrites=true&w=majority
