@@ -1,5 +1,6 @@
 const express = require('express');
 const mongoose = require('mongoose');
+const cors = require('cors');
 const cookieSession = require('cookie-session');
 const passport = require('passport');
 const keys = require('./config/keys.js');
@@ -9,6 +10,10 @@ require('./services/passport');
 mongoose.connect(keys.mongoURI, { useNewUrlParser: true });
 
 const app = express();
+
+const corsOptions = { exposedHeaders: 'x-auth' };
+app.use(cors());
+app.use(cors(corsOptions));
 
 app.use(cookieSession({
     maxAge: 30 * 34 * 60 * 60 * 1000,
