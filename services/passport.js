@@ -28,10 +28,8 @@ passport.use(new GoogleStrategy({
 
     const existingUser = await User.findOne({ googleId: profile.id })
     if(existingUser) {
-        done(null, existingUser);
-    } else {
-        await new User({ googleId: profile.id }).save()
-        .then((user) => { done(null, user); })
-        .catch((e) => { console.log(e); })
+        return done(null, existingUser);
     }
+    const user = await new User({ googleId: profile.id }).save()
+    done(null, user);
 }));
