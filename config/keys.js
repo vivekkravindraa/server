@@ -1,8 +1,5 @@
-module.exports = {
-    googleClientID: '708904043830-kbt1ars7ocv7chheqbe821rr1nb90bis.apps.googleusercontent.com',
-    googleClientSecret: '0HshGXNvRn1zVS4HEvvun8fs',
-    mongoURI: 'mongodb+srv://viveKsLoc:kusumaraVi4$@cluster0-a42ij.mongodb.net/test?retryWrites=true&w=majority',
-    cookieKey: 'redacted'
+if(process.env.NODE_ENV === 'production') {
+    module.exports = require('./prod');
+} else {
+    module.exports = require('./dev');
 }
-
-// mongodb+srv://vivekravindra4:<password>@cluster0-0v8pb.mongodb.net/test?retryWrites=true&w=majority
