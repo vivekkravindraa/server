@@ -5,6 +5,7 @@
   "proxy": "http://localhost:5000",
   "dependencies": {
     "axios": "^0.19.0",
+    "lodash": "^4.17.15",
     "materialize-css": "^1.0.0",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
